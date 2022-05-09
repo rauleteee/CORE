@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+<header>
+	<header class="main" id="mainHeader"> 
+</header>
+<nav>
+	<a href="/">HOME</a>
+	<a href="/author">CURRICULUM DEL AUTOR</a>
+	<a href="/posts">POSTS DEL AUTOR</a>
+	<a href="/users">LISTA DE USUARIOS</a>
+	<div>
+		<% if (!locals.loginUser) { %>
+			<a href="/login">Login</a>
+		<% } else { %>
+			<a href="/users/<%= loginUser.id %>"><%= loginUser.username %></a>
+			<a href="/login?_method=DELETE">Logout</a>
+		<% } %>
+	</div>
+</nav>
+<section><%- body %> </section>
+
+  <p>Pagina web para practica 6 de core</p>
+  <footer>Created on 27 of April of 2022</footer>
+</body>
+</html>

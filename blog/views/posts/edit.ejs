@@ -1,0 +1,7 @@
+<h1>
+    Edit Post:
+</h1>
+
+<form method="post" action="/posts/<%= post.id %>?_method=PUT" enctype="multipart/form-data" >
+    <%- include('_forms'); %>
+</form>

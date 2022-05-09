@@ -1,0 +1,15 @@
+<article class="postShow">
+
+    <h1>
+       <%= post.title %>
+    </h1>
+    
+    <%- include('../attachments/attachment'); %>
+    
+    <div>
+        <%= post.body %>
+    </div>
+    
+    </article>
+    
+    <a href="/posts" class="button">Go back</a>
